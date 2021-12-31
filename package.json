@@ -1,0 +1,27 @@
+{
+  "name": "onlinecourses",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon --inspect src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "courses",
+    "nodejs",
+    "expressjs"
+  ],
+  "author": "xuanthao",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "mongoose": "^5.1.4"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}

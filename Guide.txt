@@ -1,0 +1,31 @@
+Kiem tra project da cai nodejs chua
+- node -v
+- npm -v
+Tao project trong thu muc => open terminal:
+- npm init
+- dien thong tin
+- npm i express (1)
+- npm i nodemon --save-dev (2)
+- them vao package: script: "start": "nodemon --inspect app.js",(inspect: debug nodejs)
+Install Morgan (Moi lan refesh trang thi co logger hien len)
+- npm i morgan --save-dev (3)
+- const morgan = require('morgan');
+- app.use(morgan('combined'))
+Install Handlebars(Template engine)
+- npm install express-handlebars (4)
+Them vao app.js
+const path = require('path')
+const expressHbs = require('express-handlebars')
+
+app.engine('hbs',expressHbs.engine({
+    extname: '.hbs'
+}))
+app.set('view engine','hbs')
+app.set('views', path.join(__dirname,'views'))
+
+Tao folder partials chua header, footer
+{{body}} render ra cai file minh truyen vao
+
+npm install mongoose, connect mongodb (5)
+
+
