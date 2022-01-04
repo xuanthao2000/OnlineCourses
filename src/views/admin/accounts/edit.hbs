@@ -1,0 +1,41 @@
+{{#if accounts.isAdmin }}
+    <h4>Bạn không được chỉnh sửa admin</h4>
+{{else}}
+<div class="mt-4">
+    <div class="container">
+        <h2>Chỉnh sửa tài khoản</h2>
+        <form method="post" action="/admin/accounts/edit/{{accounts._id}}?_method=put">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{accounts.name}}">
+            </div>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" value="{{accounts.username}}">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                <input type="text" class="form-control" id="password" name="password" value="{{accounts.password}}">
+            </div>
+            <div class="mb-3">
+                <label for="sex" class="form-label">Gender:</label>
+                <input type="text" class="form-control" id="sex" name="sex" value="{{accounts.sex}}">
+            </div>
+            <div class="mb-3">
+                <label for="avatar" class="form-label">Avatar:</label>
+                <input type="text" class="form-control" id="avatar" name="avatar" value="{{accounts.avatar}}">
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone:</label>
+                <input type="text" class="form-control" id="phone" name="phone" value="{{accounts.phone}}">
+            </div>
+            <div class="mb-3">
+                <label for="isAdmin" class="form-label">Admin:</label>
+                <input type="text" class="form-control" id="isAdmin" name="isAdmin" value="{{accounts.isAdmin}}">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Lưu lại</button>
+        </form>
+    </div>
+</div>
+{{/if}}

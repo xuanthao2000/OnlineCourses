@@ -28,4 +28,6 @@ Tao folder partials chua header, footer
 
 npm install mongoose, connect mongodb (5)
 
+npm i method-override (method: put)
+
 

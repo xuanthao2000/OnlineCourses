@@ -1,0 +1,20 @@
+<div class="mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <button>HỌC NGAY</button>
+                <div class="info-course">
+                    <p>Tổng số khóa học: 25 videos</p>
+                    <p>Trình độ trung bình</p>
+                    <p>Cần 12 giờ để học</p>
+                    <p>Truy cập mọi lúc mọi nơi</p>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <h2>Xây dựng web với {{courses.name}}</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{courses.videoID}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>{{courses.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

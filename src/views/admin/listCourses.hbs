@@ -1,0 +1,44 @@
+<div class="mt-4">
+    <div class="container">
+        <h3>Các khóa học của tôi</h3> 
+         <a href="/admin/courses/create">Thêm khóa học </a> |
+         <a href="/course/trash">Thùng rác</a> 
+        
+        <table class="table mt-4 ">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Tên khóa học</th>
+                    <th scope="col">Mô tả</th>
+                    <th scope="col">Slug</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                {{#each courses}}
+                    <form method="post" action="/admin/courses/delete/{{this._id}}?_method=delete">
+                    <tr>
+                        <td>{{@index}}</td>
+                        <td>{{this.name}}</td>
+                        <td>{{this.description}}</td>
+                        <td>{{this.slug}}</td>
+                        <td>
+                            <a href="/admin/courses/edit/{{this._id}}" class="btn btn-primary">Edit</a>
+                            <input type="submit" value="Delete" class="btn btn-danger" />
+                        </td>
+                    <tr>
+                        </form>
+                {{else}}
+                    <tr>
+                        <td col="5">
+                            Bạn chưa đăng khóa học nào.
+                            <a href="/course/create">Đăng khóa học</a>
+                        </td>
+                    </tr>
+                {{/each}}
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
